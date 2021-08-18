@@ -544,6 +544,15 @@
 									"name": "zx_visitid",
 									"type": "String"
 								}
+							},
+							{
+								"source": {
+									"name": "zx_visitsid",
+									"type": "Guid"
+								},
+								"sink": {
+									"name": "id"
+								}
 							}
 						]
 					}
