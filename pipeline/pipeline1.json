@@ -551,7 +551,8 @@
 									"type": "Guid"
 								},
 								"sink": {
-									"name": "id"
+									"name": "Id",
+									"type": "Guid"
 								}
 							}
 						]
