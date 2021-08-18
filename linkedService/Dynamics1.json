@@ -1,0 +1,15 @@
+{
+	"name": "Dynamics1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "Dynamics",
+		"typeProperties": {
+			"deploymentType": "Online",
+			"serviceUri": "https://org92267fd6.crm8.dynamics.com/main.aspx",
+			"authenticationType": "Office365",
+			"username": "jagpreet.singh@zoxima.com",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIlpPWElNQURBVEFGQUNUT1JZXzIyNmJhM2E2LWM4OGYtNDE4ZS05YTg0LWZjN2VlYTRkOWE2MSINCn0="
+		}
+	}
+}

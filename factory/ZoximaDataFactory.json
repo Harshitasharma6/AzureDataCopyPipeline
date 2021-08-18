@@ -1,0 +1,9 @@
+{
+	"name": "ZoximaDataFactory",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "80f024a1-4bd5-4b93-bca2-e7a0e7694c55",
+		"tenantId": "923bb7ae-3d80-46c7-b4b1-dd832ab44683"
+	}
+}
