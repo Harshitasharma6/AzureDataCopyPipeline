@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ZoximaDataFactory"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"Dynamics1_password": {
+			"value": ""
+		},
+		"Dynamics1_properties_typeProperties_username": {
+			"value": "jagpreet.singh@zoxima.com"
+		}
+	}
+}
