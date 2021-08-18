@@ -207,17 +207,6 @@
 							},
 							{
 								"source": {
-									"name": "ownerid",
-									"type": "Guid",
-									"physicalType": "uniqueidentifier"
-								},
-								"sink": {
-									"name": "ownerid",
-									"type": "Guid"
-								}
-							},
-							{
-								"source": {
 									"name": "owneridname",
 									"type": "String",
 									"physicalType": "nvarchar"
