@@ -32,37 +32,6 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "owneridname",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "owneridname",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "owneridtype",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "owneridtype",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "ownerid",
-									"physicalType": "uniqueidentifier"
-								},
-								"sink": {
-									"name": "ownerid"
-								}
-							},
-							{
-								"source": {
 									"name": "zx_customer",
 									"type": "Guid",
 									"physicalType": "uniqueidentifier"
