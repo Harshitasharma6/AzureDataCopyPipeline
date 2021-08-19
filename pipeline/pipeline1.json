@@ -25,7 +25,7 @@
 						"writeBatchSize": 10,
 						"writeBehavior": "upsert",
 						"ignoreNullValues": true,
-						"alternateKeyName": "Id"
+						"alternateKeyName": "zx_visitsid"
 					},
 					"enableStaging": false,
 					"translator": {
@@ -510,65 +510,6 @@
 				"outputs": [
 					{
 						"referenceName": "DynamicsEntity1",
-						"type": "DatasetReference"
-					}
-				]
-			},
-			{
-				"name": "Copy data2",
-				"type": "Copy",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "7.00:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"source": {
-						"type": "DynamicsSource"
-					},
-					"sink": {
-						"type": "AzureSqlSink"
-					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "zx_visitid",
-									"type": "String"
-								},
-								"sink": {
-									"name": "zx_visitid",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "zx_visitsid",
-									"type": "Guid"
-								},
-								"sink": {
-									"name": "Id",
-									"type": "Guid"
-								}
-							}
-						]
-					}
-				},
-				"inputs": [
-					{
-						"referenceName": "DynamicsEntity1",
-						"type": "DatasetReference"
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference"
 					}
 				]
