@@ -24,8 +24,7 @@
 						"type": "DynamicsSink",
 						"writeBatchSize": 10,
 						"writeBehavior": "upsert",
-						"ignoreNullValues": true,
-						"alternateKeyName": "zx_pgid"
+						"ignoreNullValues": true
 					},
 					"enableStaging": false,
 					"translator": {
@@ -33,182 +32,6 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "createdby",
-									"type": "Guid",
-									"physicalType": "uniqueidentifier"
-								},
-								"sink": {
-									"name": "createdby",
-									"type": "Guid"
-								}
-							},
-							{
-								"source": {
-									"name": "createdbyname",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "createdbyname",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "createdbyyominame",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "createdbyyominame",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "createdon",
-									"type": "DateTime",
-									"physicalType": "datetime"
-								},
-								"sink": {
-									"name": "createdon",
-									"type": "DateTime"
-								}
-							},
-							{
-								"source": {
-									"name": "createdonbehalfby",
-									"type": "Guid",
-									"physicalType": "uniqueidentifier"
-								},
-								"sink": {
-									"name": "createdonbehalfby",
-									"type": "Guid"
-								}
-							},
-							{
-								"source": {
-									"name": "createdonbehalfbyname",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "createdonbehalfbyname",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "createdonbehalfbyyominame",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "createdonbehalfbyyominame",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "importsequencenumber",
-									"type": "Int32",
-									"physicalType": "int"
-								},
-								"sink": {
-									"name": "importsequencenumber",
-									"type": "Int32"
-								}
-							},
-							{
-								"source": {
-									"name": "modifiedby",
-									"type": "Guid",
-									"physicalType": "uniqueidentifier"
-								},
-								"sink": {
-									"name": "modifiedby",
-									"type": "Guid"
-								}
-							},
-							{
-								"source": {
-									"name": "modifiedbyname",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "modifiedbyname",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "modifiedbyyominame",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "modifiedbyyominame",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "modifiedon",
-									"type": "DateTime",
-									"physicalType": "datetime"
-								},
-								"sink": {
-									"name": "modifiedon",
-									"type": "DateTime"
-								}
-							},
-							{
-								"source": {
-									"name": "modifiedonbehalfby",
-									"type": "Guid",
-									"physicalType": "uniqueidentifier"
-								},
-								"sink": {
-									"name": "modifiedonbehalfby",
-									"type": "Guid"
-								}
-							},
-							{
-								"source": {
-									"name": "modifiedonbehalfbyname",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "modifiedonbehalfbyname",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "modifiedonbehalfbyyominame",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "modifiedonbehalfbyyominame",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "overriddencreatedon",
-									"type": "DateTime",
-									"physicalType": "datetime"
-								},
-								"sink": {
-									"name": "overriddencreatedon",
-									"type": "DateTime"
-								}
-							},
-							{
-								"source": {
 									"name": "owneridname",
 									"type": "String",
 									"physicalType": "nvarchar"
@@ -231,50 +54,6 @@
 							},
 							{
 								"source": {
-									"name": "owneridyominame",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "owneridyominame",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "owningbusinessunit",
-									"type": "Guid",
-									"physicalType": "uniqueidentifier"
-								},
-								"sink": {
-									"name": "owningbusinessunit",
-									"type": "Guid"
-								}
-							},
-							{
-								"source": {
-									"name": "owningbusinessunitname",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "owningbusinessunitname",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "owningteam",
-									"type": "Guid",
-									"physicalType": "uniqueidentifier"
-								},
-								"sink": {
-									"name": "owningteam",
-									"type": "Guid"
-								}
-							},
-							{
-								"source": {
 									"name": "owninguser",
 									"type": "Guid",
 									"physicalType": "uniqueidentifier"
@@ -282,61 +61,6 @@
 								"sink": {
 									"name": "owninguser",
 									"type": "Guid"
-								}
-							},
-							{
-								"source": {
-									"name": "statecode",
-									"type": "Int32",
-									"physicalType": "int"
-								},
-								"sink": {
-									"name": "statecode",
-									"type": "Int32"
-								}
-							},
-							{
-								"source": {
-									"name": "statuscode",
-									"type": "Int32",
-									"physicalType": "int"
-								},
-								"sink": {
-									"name": "statuscode",
-									"type": "Int32"
-								}
-							},
-							{
-								"source": {
-									"name": "timezoneruleversionnumber",
-									"type": "Int32",
-									"physicalType": "int"
-								},
-								"sink": {
-									"name": "timezoneruleversionnumber",
-									"type": "Int32"
-								}
-							},
-							{
-								"source": {
-									"name": "utcconversiontimezonecode",
-									"type": "Int32",
-									"physicalType": "int"
-								},
-								"sink": {
-									"name": "utcconversiontimezonecode",
-									"type": "Int32"
-								}
-							},
-							{
-								"source": {
-									"name": "versionnumber",
-									"type": "Int64",
-									"physicalType": "bigint"
-								},
-								"sink": {
-									"name": "versionnumber",
-									"type": "Int64"
 								}
 							},
 							{
@@ -462,8 +186,7 @@
 							},
 							{
 								"source": {
-									"name": "zx_visitsid",
-									"type": "Guid",
+									"name": "Id",
 									"physicalType": "uniqueidentifier"
 								},
 								"sink": {
