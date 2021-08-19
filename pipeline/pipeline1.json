@@ -54,13 +54,11 @@
 							},
 							{
 								"source": {
-									"name": "owninguser",
-									"type": "Guid",
+									"name": "ownerid",
 									"physicalType": "uniqueidentifier"
 								},
 								"sink": {
-									"name": "owninguser",
-									"type": "Guid"
+									"name": "ownerid"
 								}
 							},
 							{
