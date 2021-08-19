@@ -25,7 +25,7 @@
 						"writeBatchSize": 10,
 						"writeBehavior": "upsert",
 						"ignoreNullValues": true,
-						"alternateKeyName": "zx_visitsid"
+						"alternateKeyName": "zx_pgid"
 					},
 					"enableStaging": false,
 					"translator": {
