@@ -23,7 +23,9 @@
 					"sink": {
 						"type": "DynamicsSink",
 						"writeBatchSize": 10,
-						"writeBehavior": "upsert"
+						"writeBehavior": "upsert",
+						"ignoreNullValues": true,
+						"alternateKeyName": "Id"
 					},
 					"enableStaging": false,
 					"translator": {
