@@ -1,0 +1,24 @@
+{
+	"name": "AzureToDynamics Sync",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline1",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2021-08-19T22:11:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
