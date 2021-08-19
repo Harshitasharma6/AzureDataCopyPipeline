@@ -221,7 +221,8 @@
 						"type": "DynamicsSource"
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "AzureSqlSink",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -525,16 +526,6 @@
 								"sink": {
 									"name": "modifiedbyname",
 									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "zx_visitsid",
-									"type": "Guid"
-								},
-								"sink": {
-									"name": "zx_visitsid",
-									"type": "Guid"
 								}
 							},
 							{
