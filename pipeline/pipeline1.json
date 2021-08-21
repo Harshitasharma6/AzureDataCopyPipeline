@@ -205,11 +205,11 @@
 				]
 			},
 			{
-				"name": "Data flow1",
-				"type": "ExecuteDataFlow",
+				"name": "Copy data2",
+				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
-					"timeout": "1.00:00:00",
+					"timeout": "7.00:00:00",
 					"retry": 0,
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
@@ -217,16 +217,202 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataflow": {
-						"referenceName": "dataflow1",
-						"type": "DataFlowReference"
+					"source": {
+						"type": "DynamicsSource"
 					},
-					"compute": {
-						"coreCount": 8,
-						"computeType": "General"
+					"sink": {
+						"type": "AzureSqlSink",
+						"disableMetricsCollection": false
 					},
-					"traceLevel": "Fine"
-				}
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "zx_visitstatus",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "zx_visitstatus",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "zx_visitobjective",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "zx_visitobjective",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "zx_visittype",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "zx_visittype",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "zx_visitapproved",
+									"type": "Boolean"
+								},
+								"sink": {
+									"name": "zx_visitapproved",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "zx_team",
+									"type": "Guid"
+								},
+								"sink": {
+									"name": "zx_team",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "zx_customer",
+									"type": "Guid"
+								},
+								"sink": {
+									"name": "zx_customer",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "ownerid",
+									"type": "Guid"
+								},
+								"sink": {
+									"name": "ownerid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "zx_checkinlongitude",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "zx_checkinlongitude",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "zx_reasonforreschedulingvisit",
+									"type": "String"
+								},
+								"sink": {
+									"name": "zx_reasonforreschedulingvisit",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "zx_checkoutlongitude",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "zx_checkoutlongitude",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "zx_checkinlatitude",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "zx_checkinlatitude",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "zx_pgid",
+									"type": "String"
+								},
+								"sink": {
+									"name": "zx_pgid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "zx_visitid",
+									"type": "String"
+								},
+								"sink": {
+									"name": "zx_visitid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "zx_visitsid",
+									"type": "Guid"
+								},
+								"sink": {
+									"name": "zx_visitsid",
+									"type": "Guid"
+								}
+							},
+							{
+								"source": {
+									"name": "createdon",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "createdon",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "zx_visitdate",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "zx_visitdate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "zx_checkoutlatitude",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "zx_checkoutlatitude",
+									"type": "Decimal"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DynamicsEntity2",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"annotations": []
