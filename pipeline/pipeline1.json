@@ -364,7 +364,7 @@
 									"type": "Guid"
 								},
 								"sink": {
-									"name": "zx_visitsid",
+									"name": "Id",
 									"type": "Guid"
 								}
 							},
