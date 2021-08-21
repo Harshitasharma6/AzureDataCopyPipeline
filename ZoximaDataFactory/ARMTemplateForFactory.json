@@ -51,331 +51,13 @@
 							"sink": {
 								"type": "DynamicsSink",
 								"writeBatchSize": 10,
-								"writeBehavior": "upsert"
+								"writeBehavior": "upsert",
+								"ignoreNullValues": true
 							},
 							"enableStaging": false,
 							"translator": {
 								"type": "TabularTranslator",
 								"mappings": [
-									{
-										"source": {
-											"name": "createdby",
-											"type": "Guid",
-											"physicalType": "uniqueidentifier"
-										},
-										"sink": {
-											"name": "createdby",
-											"type": "Guid"
-										}
-									},
-									{
-										"source": {
-											"name": "createdbyname",
-											"type": "String",
-											"physicalType": "nvarchar"
-										},
-										"sink": {
-											"name": "createdbyname",
-											"type": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "createdbyyominame",
-											"type": "String",
-											"physicalType": "nvarchar"
-										},
-										"sink": {
-											"name": "createdbyyominame",
-											"type": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "createdon",
-											"type": "DateTime",
-											"physicalType": "datetime"
-										},
-										"sink": {
-											"name": "createdon",
-											"type": "DateTime"
-										}
-									},
-									{
-										"source": {
-											"name": "createdonbehalfby",
-											"type": "Guid",
-											"physicalType": "uniqueidentifier"
-										},
-										"sink": {
-											"name": "createdonbehalfby",
-											"type": "Guid"
-										}
-									},
-									{
-										"source": {
-											"name": "createdonbehalfbyname",
-											"type": "String",
-											"physicalType": "nvarchar"
-										},
-										"sink": {
-											"name": "createdonbehalfbyname",
-											"type": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "createdonbehalfbyyominame",
-											"type": "String",
-											"physicalType": "nvarchar"
-										},
-										"sink": {
-											"name": "createdonbehalfbyyominame",
-											"type": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "importsequencenumber",
-											"type": "Int32",
-											"physicalType": "int"
-										},
-										"sink": {
-											"name": "importsequencenumber",
-											"type": "Int32"
-										}
-									},
-									{
-										"source": {
-											"name": "modifiedby",
-											"type": "Guid",
-											"physicalType": "uniqueidentifier"
-										},
-										"sink": {
-											"name": "modifiedby",
-											"type": "Guid"
-										}
-									},
-									{
-										"source": {
-											"name": "modifiedbyname",
-											"type": "String",
-											"physicalType": "nvarchar"
-										},
-										"sink": {
-											"name": "modifiedbyname",
-											"type": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "modifiedbyyominame",
-											"type": "String",
-											"physicalType": "nvarchar"
-										},
-										"sink": {
-											"name": "modifiedbyyominame",
-											"type": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "modifiedon",
-											"type": "DateTime",
-											"physicalType": "datetime"
-										},
-										"sink": {
-											"name": "modifiedon",
-											"type": "DateTime"
-										}
-									},
-									{
-										"source": {
-											"name": "modifiedonbehalfby",
-											"type": "Guid",
-											"physicalType": "uniqueidentifier"
-										},
-										"sink": {
-											"name": "modifiedonbehalfby",
-											"type": "Guid"
-										}
-									},
-									{
-										"source": {
-											"name": "modifiedonbehalfbyname",
-											"type": "String",
-											"physicalType": "nvarchar"
-										},
-										"sink": {
-											"name": "modifiedonbehalfbyname",
-											"type": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "modifiedonbehalfbyyominame",
-											"type": "String",
-											"physicalType": "nvarchar"
-										},
-										"sink": {
-											"name": "modifiedonbehalfbyyominame",
-											"type": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "overriddencreatedon",
-											"type": "DateTime",
-											"physicalType": "datetime"
-										},
-										"sink": {
-											"name": "overriddencreatedon",
-											"type": "DateTime"
-										}
-									},
-									{
-										"source": {
-											"name": "ownerid",
-											"type": "Guid",
-											"physicalType": "uniqueidentifier"
-										},
-										"sink": {
-											"name": "ownerid",
-											"type": "Guid"
-										}
-									},
-									{
-										"source": {
-											"name": "owneridname",
-											"type": "String",
-											"physicalType": "nvarchar"
-										},
-										"sink": {
-											"name": "owneridname",
-											"type": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "owneridtype",
-											"type": "String",
-											"physicalType": "nvarchar"
-										},
-										"sink": {
-											"name": "owneridtype",
-											"type": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "owneridyominame",
-											"type": "String",
-											"physicalType": "nvarchar"
-										},
-										"sink": {
-											"name": "owneridyominame",
-											"type": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "owningbusinessunit",
-											"type": "Guid",
-											"physicalType": "uniqueidentifier"
-										},
-										"sink": {
-											"name": "owningbusinessunit",
-											"type": "Guid"
-										}
-									},
-									{
-										"source": {
-											"name": "owningbusinessunitname",
-											"type": "String",
-											"physicalType": "nvarchar"
-										},
-										"sink": {
-											"name": "owningbusinessunitname",
-											"type": "String"
-										}
-									},
-									{
-										"source": {
-											"name": "owningteam",
-											"type": "Guid",
-											"physicalType": "uniqueidentifier"
-										},
-										"sink": {
-											"name": "owningteam",
-											"type": "Guid"
-										}
-									},
-									{
-										"source": {
-											"name": "owninguser",
-											"type": "Guid",
-											"physicalType": "uniqueidentifier"
-										},
-										"sink": {
-											"name": "owninguser",
-											"type": "Guid"
-										}
-									},
-									{
-										"source": {
-											"name": "statecode",
-											"type": "Int32",
-											"physicalType": "int"
-										},
-										"sink": {
-											"name": "statecode",
-											"type": "Int32"
-										}
-									},
-									{
-										"source": {
-											"name": "statuscode",
-											"type": "Int32",
-											"physicalType": "int"
-										},
-										"sink": {
-											"name": "statuscode",
-											"type": "Int32"
-										}
-									},
-									{
-										"source": {
-											"name": "timezoneruleversionnumber",
-											"type": "Int32",
-											"physicalType": "int"
-										},
-										"sink": {
-											"name": "timezoneruleversionnumber",
-											"type": "Int32"
-										}
-									},
-									{
-										"source": {
-											"name": "utcconversiontimezonecode",
-											"type": "Int32",
-											"physicalType": "int"
-										},
-										"sink": {
-											"name": "utcconversiontimezonecode",
-											"type": "Int32"
-										}
-									},
-									{
-										"source": {
-											"name": "versionnumber",
-											"type": "Int64",
-											"physicalType": "bigint"
-										},
-										"sink": {
-											"name": "versionnumber",
-											"type": "Int64"
-										}
-									},
 									{
 										"source": {
 											"name": "zx_customer",
@@ -499,8 +181,7 @@
 									},
 									{
 										"source": {
-											"name": "zx_visitsid",
-											"type": "Guid",
+											"name": "Id",
 											"physicalType": "uniqueidentifier"
 										},
 										"sink": {
@@ -552,13 +233,227 @@
 								"parameters": {}
 							}
 						]
+					},
+					{
+						"name": "Copy data2",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "7.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "DynamicsSource"
+							},
+							"sink": {
+								"type": "AzureSqlSink",
+								"disableMetricsCollection": false
+							},
+							"enableStaging": false,
+							"validateDataConsistency": false,
+							"translator": {
+								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "zx_visitstatus",
+											"type": "Int32"
+										},
+										"sink": {
+											"name": "zx_visitstatus",
+											"type": "Int32"
+										}
+									},
+									{
+										"source": {
+											"name": "zx_visitobjective",
+											"type": "Int32"
+										},
+										"sink": {
+											"name": "zx_visitobjective",
+											"type": "Int32"
+										}
+									},
+									{
+										"source": {
+											"name": "zx_visittype",
+											"type": "Int32"
+										},
+										"sink": {
+											"name": "zx_visittype",
+											"type": "Int32"
+										}
+									},
+									{
+										"source": {
+											"name": "zx_visitapproved",
+											"type": "Boolean"
+										},
+										"sink": {
+											"name": "zx_visitapproved",
+											"type": "Boolean"
+										}
+									},
+									{
+										"source": {
+											"name": "zx_team",
+											"type": "Guid"
+										},
+										"sink": {
+											"name": "zx_team",
+											"type": "Guid"
+										}
+									},
+									{
+										"source": {
+											"name": "zx_customer",
+											"type": "Guid"
+										},
+										"sink": {
+											"name": "zx_customer",
+											"type": "Guid"
+										}
+									},
+									{
+										"source": {
+											"name": "ownerid",
+											"type": "Guid"
+										},
+										"sink": {
+											"name": "ownerid",
+											"type": "Guid"
+										}
+									},
+									{
+										"source": {
+											"name": "zx_checkinlongitude",
+											"type": "Double"
+										},
+										"sink": {
+											"name": "zx_checkinlongitude",
+											"type": "Decimal"
+										}
+									},
+									{
+										"source": {
+											"name": "zx_reasonforreschedulingvisit",
+											"type": "String"
+										},
+										"sink": {
+											"name": "zx_reasonforreschedulingvisit",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "zx_checkoutlongitude",
+											"type": "Double"
+										},
+										"sink": {
+											"name": "zx_checkoutlongitude",
+											"type": "Decimal"
+										}
+									},
+									{
+										"source": {
+											"name": "zx_checkinlatitude",
+											"type": "Double"
+										},
+										"sink": {
+											"name": "zx_checkinlatitude",
+											"type": "Decimal"
+										}
+									},
+									{
+										"source": {
+											"name": "zx_pgid",
+											"type": "String"
+										},
+										"sink": {
+											"name": "zx_pgid",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "zx_visitid",
+											"type": "String"
+										},
+										"sink": {
+											"name": "zx_visitid",
+											"type": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "zx_visitsid",
+											"type": "Guid"
+										},
+										"sink": {
+											"name": "Id",
+											"type": "Guid"
+										}
+									},
+									{
+										"source": {
+											"name": "createdon",
+											"type": "DateTime"
+										},
+										"sink": {
+											"name": "createdon",
+											"type": "DateTime"
+										}
+									},
+									{
+										"source": {
+											"name": "zx_visitdate",
+											"type": "DateTime"
+										},
+										"sink": {
+											"name": "zx_visitdate",
+											"type": "DateTime"
+										}
+									},
+									{
+										"source": {
+											"name": "zx_checkoutlatitude",
+											"type": "Double"
+										},
+										"sink": {
+											"name": "zx_checkoutlatitude",
+											"type": "Decimal"
+										}
+									}
+								]
+							}
+						},
+						"inputs": [
+							{
+								"referenceName": "DynamicsEntity2",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "AzureSqlTable1",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
 					}
 				],
 				"annotations": []
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/AzureSqlTable1')]",
-				"[concat(variables('factoryId'), '/datasets/DynamicsEntity1')]"
+				"[concat(variables('factoryId'), '/datasets/DynamicsEntity1')]",
+				"[concat(variables('factoryId'), '/datasets/DynamicsEntity2')]"
 			]
 		},
 		{
@@ -572,295 +467,7 @@
 				},
 				"annotations": [],
 				"type": "AzureSqlTable",
-				"schema": [
-					{
-						"name": "Id",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "SinkCreatedOn",
-						"type": "datetime",
-						"precision": 23,
-						"scale": 3
-					},
-					{
-						"name": "SinkModifiedOn",
-						"type": "datetime",
-						"precision": 23,
-						"scale": 3
-					},
-					{
-						"name": "statecode",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "statuscode",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "zx_visitstatus",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "zx_visitobjective",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "zx_visittype",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "zx_visitapproved",
-						"type": "bit"
-					},
-					{
-						"name": "owninguser",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "owninguser_entitytype",
-						"type": "nvarchar"
-					},
-					{
-						"name": "owningteam",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "owningteam_entitytype",
-						"type": "nvarchar"
-					},
-					{
-						"name": "createdonbehalfby",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "createdonbehalfby_entitytype",
-						"type": "nvarchar"
-					},
-					{
-						"name": "zx_customer",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "zx_customer_entitytype",
-						"type": "nvarchar"
-					},
-					{
-						"name": "owningbusinessunit",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "owningbusinessunit_entitytype",
-						"type": "nvarchar"
-					},
-					{
-						"name": "modifiedby",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "modifiedby_entitytype",
-						"type": "nvarchar"
-					},
-					{
-						"name": "createdby",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "createdby_entitytype",
-						"type": "nvarchar"
-					},
-					{
-						"name": "modifiedonbehalfby",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "modifiedonbehalfby_entitytype",
-						"type": "nvarchar"
-					},
-					{
-						"name": "ownerid",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "ownerid_entitytype",
-						"type": "nvarchar"
-					},
-					{
-						"name": "createdonbehalfbyyominame",
-						"type": "nvarchar"
-					},
-					{
-						"name": "zx_longitude",
-						"type": "decimal",
-						"precision": 38,
-						"scale": 5
-					},
-					{
-						"name": "owneridname",
-						"type": "nvarchar"
-					},
-					{
-						"name": "zx_customeryominame",
-						"type": "nvarchar"
-					},
-					{
-						"name": "importsequencenumber",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "modifiedbyyominame",
-						"type": "nvarchar"
-					},
-					{
-						"name": "zx_lattitude",
-						"type": "decimal",
-						"precision": 38,
-						"scale": 5
-					},
-					{
-						"name": "zx_visitid",
-						"type": "nvarchar"
-					},
-					{
-						"name": "utcconversiontimezonecode",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "createdbyyominame",
-						"type": "nvarchar"
-					},
-					{
-						"name": "modifiedbyname",
-						"type": "nvarchar"
-					},
-					{
-						"name": "zx_visitsid",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "timezoneruleversionnumber",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "owneridtype",
-						"type": "nvarchar"
-					},
-					{
-						"name": "owneridyominame",
-						"type": "nvarchar"
-					},
-					{
-						"name": "modifiedon",
-						"type": "datetime",
-						"precision": 23,
-						"scale": 3
-					},
-					{
-						"name": "modifiedonbehalfbyyominame",
-						"type": "nvarchar"
-					},
-					{
-						"name": "createdbyname",
-						"type": "nvarchar"
-					},
-					{
-						"name": "createdon",
-						"type": "datetime",
-						"precision": 23,
-						"scale": 3
-					},
-					{
-						"name": "zx_visitdate",
-						"type": "datetime",
-						"precision": 23,
-						"scale": 3
-					},
-					{
-						"name": "createdonbehalfbyname",
-						"type": "nvarchar"
-					},
-					{
-						"name": "zx_customername",
-						"type": "nvarchar"
-					},
-					{
-						"name": "modifiedonbehalfbyname",
-						"type": "nvarchar"
-					},
-					{
-						"name": "versionnumber",
-						"type": "bigint",
-						"precision": 19
-					},
-					{
-						"name": "overriddencreatedon",
-						"type": "datetime",
-						"precision": 23,
-						"scale": 3
-					},
-					{
-						"name": "zx_pgid",
-						"type": "nvarchar"
-					},
-					{
-						"name": "zx_team",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "zx_team_entitytype",
-						"type": "nvarchar"
-					},
-					{
-						"name": "zx_teamname",
-						"type": "nvarchar"
-					},
-					{
-						"name": "zx_checkinlongitude",
-						"type": "decimal",
-						"precision": 38,
-						"scale": 5
-					},
-					{
-						"name": "zx_checkoutlongitude",
-						"type": "decimal",
-						"precision": 38,
-						"scale": 5
-					},
-					{
-						"name": "zx_checkinlattitude",
-						"type": "decimal",
-						"precision": 38,
-						"scale": 5
-					},
-					{
-						"name": "zx_checkoutlatitude",
-						"type": "decimal",
-						"precision": 38,
-						"scale": 5
-					},
-					{
-						"name": "zx_checkinlatitude",
-						"type": "decimal",
-						"precision": 38,
-						"scale": 5
-					},
-					{
-						"name": "zx_reasonforreschedulingvisit",
-						"type": "nvarchar"
-					},
-					{
-						"name": "owningbusinessunitname",
-						"type": "nvarchar"
-					}
-				],
+				"schema": [],
 				"typeProperties": {
 					"schema": "dbo",
 					"table": "zx_visits"
@@ -872,6 +479,26 @@
 		},
 		{
 			"name": "[concat(parameters('factoryName'), '/DynamicsEntity1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Dynamics1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DynamicsEntity",
+				"schema": [],
+				"typeProperties": {
+					"entityName": "zx_visits"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/Dynamics1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DynamicsEntity2')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -922,6 +549,59 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/sync')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Minute",
+						"interval": 1,
+						"startTime": "2021-08-19T22:11:00Z",
+						"timeZone": "UTC"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dataflow1')]",
+			"type": "Microsoft.DataFactory/factories/dataflows",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"type": "MappingDataFlow",
+				"typeProperties": {
+					"sources": [
+						{
+							"dataset": {
+								"referenceName": "AzureSqlTable1",
+								"type": "DatasetReference"
+							},
+							"name": "source1"
+						}
+					],
+					"sinks": [
+						{
+							"dataset": {
+								"referenceName": "AzureSqlTable1",
+								"type": "DatasetReference"
+							},
+							"name": "sink1"
+						}
+					],
+					"transformations": [],
+					"script": "source(output(\n\t\tId as string,\n\t\tSinkCreatedOn as timestamp,\n\t\tSinkModifiedOn as timestamp,\n\t\tstatecode as integer,\n\t\tstatuscode as integer,\n\t\tzx_visitstatus as integer,\n\t\tzx_visitobjective as integer,\n\t\tzx_visittype as integer,\n\t\tzx_visitapproved as boolean,\n\t\tmodifiedonbehalfby as string,\n\t\tmodifiedonbehalfby_entitytype as string,\n\t\towningteam as string,\n\t\towningteam_entitytype as string,\n\t\tzx_team as string,\n\t\tzx_team_entitytype as string,\n\t\towninguser as string,\n\t\towninguser_entitytype as string,\n\t\tcreatedonbehalfby as string,\n\t\tcreatedonbehalfby_entitytype as string,\n\t\tzx_customer as string,\n\t\tzx_customer_entitytype as string,\n\t\towningbusinessunit as string,\n\t\towningbusinessunit_entitytype as string,\n\t\tmodifiedby as string,\n\t\tmodifiedby_entitytype as string,\n\t\tcreatedby as string,\n\t\tcreatedby_entitytype as string,\n\t\townerid as string,\n\t\townerid_entitytype as string,\n\t\tzx_checkinlongitude as decimal(38,5),\n\t\tcreatedonbehalfbyyominame as string,\n\t\towningbusinessunitname as string,\n\t\towneridname as string,\n\t\tzx_reasonforreschedulingvisit as string,\n\t\tzx_customeryominame as string,\n\t\tzx_checkoutlongitude as decimal(38,5),\n\t\tzx_checkinlatitude as decimal(38,5),\n\t\tzx_pgid as string,\n\t\timportsequencenumber as integer,\n\t\tmodifiedbyyominame as string,\n\t\tzx_visitid as string,\n\t\tutcconversiontimezonecode as integer,\n\t\tcreatedbyyominame as string,\n\t\tmodifiedbyname as string,\n\t\tzx_visitsid as string,\n\t\ttimezoneruleversionnumber as integer,\n\t\towneridtype as string,\n\t\towneridyominame as string,\n\t\tmodifiedon as timestamp,\n\t\tmodifiedonbehalfbyyominame as string,\n\t\tcreatedbyname as string,\n\t\tcreatedon as timestamp,\n\t\tzx_visitdate as timestamp,\n\t\tcreatedonbehalfbyname as string,\n\t\tzx_customername as string,\n\t\tmodifiedonbehalfbyname as string,\n\t\tzx_checkoutlatitude as decimal(38,5),\n\t\tversionnumber as long,\n\t\tzx_teamname as string,\n\t\toverriddencreatedon as timestamp\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tbatchSize: 0,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> source1\nsource1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\tformat: 'table',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\terrorHandlingOption: 'stopOnFirstError') ~> sink1"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/AzureSqlTable1')]"
+			]
 		}
 	]
 }
